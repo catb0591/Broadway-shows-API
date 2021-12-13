@@ -27,7 +27,7 @@ Post
 /shows - Add a whole new show
 
 Patch
-/shows/updateShow - update information for a show
+/shows- update information for a show
 
 Delete
-/shows - delete a show
+/shows/:title - delete a show
