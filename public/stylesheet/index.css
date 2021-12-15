@@ -1,0 +1,37 @@
+body {
+    background-color: lightgray;    
+}
+h1{
+    text-align: center;
+}
+
+.getHeader{
+    background-color: lightskyblue;
+    padding: 10px;
+
+}
+
+ul{
+    list-style: none;
+    margin-left: -25px;
+    margin-top: 0px;
+}
+
+p{
+    margin-left: 10px;
+    margin-top: 0px;
+}
+.postHeader{
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.patchHeader{
+    background-color: lightseagreen;
+    padding: 10px;
+}
+
+.deleteHeader{
+    background-color: lightslategray;
+    padding: 10px;
+}
