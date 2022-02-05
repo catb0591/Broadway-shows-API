@@ -5,7 +5,7 @@ const genresModel = require('./genres')
 const showsModel = require('./shows')
 const showsAwardsModel = require('./showsAwards')
 const showsGenresModel = require('./showsGenres')
-const theatersModel = require('./theater')
+const theatersModel = require('./theaters')
 
 const environment = process.env.NODE_ENV || 'development'
 const config = allConfigs[environment]
