@@ -1,8 +1,8 @@
-const shows = (connection, Sequelize, theater) => {
+const shows = (connection, Sequelize, theaters) => {
   return connection.define('shows', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-    title: { type: Sequelize.VARCHAR },
-    theaterId: { type: Sequelize.INTEGER, references: { model: theater, key: 'id' } },
+    title: { type: Sequelize.STRING },
+    theaterId: { type: Sequelize.INTEGER, references: { model: theaters, key: 'id' } },
     rating: { type: Sequelize.INTEGER },
     status: { type: Sequelize.ENUM('Running', 'Retired') },
   }, { paranoid: true })

@@ -1,7 +1,7 @@
 const awards = (connection, Sequelize) => {
   connection.define('awards', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-    name: { type: Sequelize.VARCHAR }
+    name: { type: Sequelize.STRING }
   }, { paranoid: true })
 }
 
