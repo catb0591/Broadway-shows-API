@@ -23,13 +23,11 @@ const ShowsGenres = showsGenresModel(connection, Sequelize, Shows, Genres)
 
 
 Shows.belongsToMany(Genres, { through: ShowsGenres })
-Genres.belongToMany(Shows, { through: ShowsGenres })
-
-Shows.belongsToMany(Awards, { through: ShowsAwards })
-Awards.belongsToMany(Shows, { through: ShowsAwards })
-
+Genres.belongsToMany(Shows, { through: ShowsGenres })
 Shows.hasMany(Theaters)
 Theaters.belongsTo(Shows)
+Awards.belongsToMany(Shows, { through: ShowsAwards })
+Shows.belongsToMany(Awards, { through: ShowsAwards })
 
 module.exports = {
   Awards,

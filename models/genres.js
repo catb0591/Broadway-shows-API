@@ -1,8 +1,8 @@
-const genres = (connection, Sequelize) => {
+const Genres = (connection, Sequelize) => {
   return connection.define('genres', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     type: { type: Sequelize.STRING }
   }, { paranoid: true })
 }
 
-module.exports = (genres)
+module.exports = Genres

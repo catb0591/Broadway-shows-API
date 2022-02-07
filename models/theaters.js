@@ -1,4 +1,4 @@
-const theaters = (connection, Sequelize) => {
+const Theaters = (connection, Sequelize) => {
   connection.define('theaters', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     name: { type: Sequelize.STRING },
@@ -6,4 +6,4 @@ const theaters = (connection, Sequelize) => {
   }, { paranoid: true })
 }
 
-module.exports = (theaters)
+module.exports = Theaters

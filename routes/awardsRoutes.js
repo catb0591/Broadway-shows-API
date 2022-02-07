@@ -9,8 +9,6 @@ router.get('/', awardsControllers.getAllAwards)
 
 router.get('/:id', awardsControllers.getAwardById)
 
-router.put('/:id', awardsControllers.updateAward)
-
 router.delete('/:id', awardsControllers.deleteAward)
 
 module.exports = router
