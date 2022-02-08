@@ -3,6 +3,7 @@ const models = require('../models')
 
 const addAward = async (req, res) => {
   try {
+    console.log(req.body)
     const { name } = req.body
 
     if (!name) {

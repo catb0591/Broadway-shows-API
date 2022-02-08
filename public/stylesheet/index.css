@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray;    
+    background-color: rgb(235, 232, 232);    
 }
 h1{
     text-align: center;
@@ -22,16 +22,16 @@ p{
     margin-top: 0px;
 }
 .postHeader{
-    background-color: lightcoral;
+    background-color: rgb(213, 199, 226);
     padding: 10px;
 }
 
-.patchHeader{
-    background-color: lightseagreen;
+.putHeader{
+    background-color: rgb(106, 201, 196);
     padding: 10px;
 }
 
 .deleteHeader{
-    background-color: lightslategray;
+    background-color: rgb(127, 159, 196);
     padding: 10px;
 }

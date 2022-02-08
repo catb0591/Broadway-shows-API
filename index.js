@@ -9,6 +9,7 @@ const theatersRouters = require('./routes/theaterRoutes')
 
 const app = express()
 
+app.use(express.json())
 app.use(express.static('public'))
 
 app.use('/api/award', awardsRouter)
