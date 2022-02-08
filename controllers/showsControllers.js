@@ -21,7 +21,23 @@ const addShow = async (req, res) => {
 
 const getAllShows = async (req, res) => {
   try {
-    const getAllShows = await models.Shows.findAll()
+    const getAllShows = await models.Shows.findAll({
+      attributes: ['id', 'title', 'rating', 'status'],
+      include: [
+        {
+          model: models.Theaters,
+          attributes: ['name', 'yearBuilt']
+        },
+        {
+          model: models.Awards,
+          attributes: ['name']
+        },
+        {
+          model: models.Genres,
+          attributes: ['type']
+        },
+      ]
+    })
 
     return res.status(200).send(getAllShows)
   } catch (e) {
@@ -39,7 +55,22 @@ const getShowById = async (req, res) => {
       where: {
         [models.Op.or]:
         [{ title: { [models.Op.like]: `%${id}%` } }, { id }, { status: { [models.Op.like]: `%${id}%` } }]
-      }
+      },
+      attributes: ['id', 'title', 'rating', 'status'],
+      include: [
+        {
+          model: models.Theaters,
+          attributes: ['name', 'yearBuilt']
+        },
+        {
+          model: models.Awards,
+          attributes: ['name']
+        },
+        {
+          model: models.Genres,
+          attributes: ['type']
+        },
+      ]
     })
 
     if (getShowById.length === 0) return res.status(400).send('No show found, please try again')
