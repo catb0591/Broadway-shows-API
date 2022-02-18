@@ -7,31 +7,78 @@ html(lang="en")
         link(rel='stylesheet', href='/stylesheet/index.css')
     body 
 
-    H1 Broadway Shows - API 
+    H1 Broadway - API 
         h2.getHeader Get  
             ul 
-                li /shows - Shows all running broadways shows
-                li /shows/findByTitle/{title} - Search for show by title 
-                li /shows/findByTheater/{theater} - Search for show by theater 
-                li /shows/findByType/{type} - Search for show by type 
-                li /shows/findByAwards/{awards} - Search for show by awards
-                li /shows/findByRating/{rating} - Search for show by rating
+                li /api/show - Shows all broadways shows
+                li /api/show/:id - Search for show by name, status or id 
+            ul
+                li /api/award - Shows all awards
+                li /api/award/:id - Search for award by name or id 
+            ul
+                li /api/genre - Shows all genres
+                li /api/genre/:id - Search for genre by type or id 
+            ul
+                li /api/theater - Shows all theaters
+                li /api/theater/:id - Search for theater by name or id 
+            ul
+                li /api/shows/awards - Shows all broadway shows linked with awards
+            ul
+                li /api/shows/genres - Shows all broadway shows linked with genres
+
 
         h2.postHeader Post
-            p /shows - Add a whole new broadway show
-            p New data will be expected to include the following fields: 
-            ul
+            ul            
+                li /api/show - Add a new broadway show
+                li New data will be expected to include the following fields: 
                 li {
-                li title:
-                li theater:
-                li type:
-                li runtime:
-                li awards: can be Null
-                li rating: can be Null (for new shows)
+                li "title":
+                li "rating": 
+                li "theaterId":
+                li "status":
+                li }
+            ul
+                li /api/award - Add a new award
+                li New data will be expected to include the following fields: 
+                li {
+                li "name":
+                li }
+            ul
+                li /api/genre - Add a new genre 
+                li New data will be expected to include the following fields: 
+                li {
+                li "type":
+                li }
+            ul
+                li /api/theater - Add a new theater 
+                li New data will be expected to include the following fields: 
+                li {
+                li "name":
+                li "yearBuilt":
+                li }
+            ul
+                li /api/shows/awards - Add a new show/award relationship
+                li New data will be expected to include the following fields: 
+                li {
+                li "showId":
+                li "awardId":
+                li }
+            ul
+                li /api/shows/genres - Add a new show/genre relationship 
+                li New data will be expected to include the following fields: 
+                li {
+                li "showId":
+                li "genreId":
                 li }
 
-        h2.patchHeader Patch 
-            p /shows - Update information for a running broadway show
+        h2.putHeader Put
+            p /api/show/:id - Update information for a running broadway show
+            p /api/genre/:id - Update information for a genre
+            p /api/theater/:id - Update information for a theater
+
 
         h2.deleteHeader Delete
-            p /shows/{title} - Delete a current show
+            p /api/show/:id - Delete a broadway show
+            p /api/award/:id - Delete an award
+            p /api/genre/:id - Delete a genre
+            p /api/theater/:id - Delete a theater

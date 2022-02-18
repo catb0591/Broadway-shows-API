@@ -31,3 +31,6 @@ Patch
 
 Delete
 /shows/:title - delete a show
+
+
+Add what the output will be and the complete URL. What type of data everything will be
