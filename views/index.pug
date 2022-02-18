@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='/stylesheet/index.css')
+    body 
+
+    H1 Broadway Shows - API 
+        h2.getHeader Get  
+            ul 
+                li /shows - Shows all running broadways shows
+                li /shows/findByTitle/{title} - Search for show by title 
+                li /shows/findByTheater/{theater} - Search for show by theater 
+                li /shows/findByType/{type} - Search for show by type 
+                li /shows/findByAwards/{awards} - Search for show by awards
+                li /shows/findByRating/{rating} - Search for show by rating
+
+        h2.postHeader Post
+            p /shows - Add a whole new broadway show
+            p New data will be expected to include the following fields: 
+            ul
+                li {
+                li title:
+                li theater:
+                li type:
+                li runtime:
+                li awards: can be Null
+                li rating: can be Null (for new shows)
+                li }
+
+        h2.patchHeader Patch 
+            p /shows - Update information for a running broadway show
+
+        h2.deleteHeader Delete
+            p /shows/{title} - Delete a current show

@@ -17,17 +17,17 @@ In this part of your project you will be building the front-end for your API sit
 }
 Get
 /shows - all shows
-/shows/title/:title
-/shows/theater/:theater
-/shows/type/:type
-/shows/awards/:awards
-/shows/rating/:rating
+/shows/findByTitle/:title
+/shows/findByTheater/:theater
+/shows/findByType/:type
+/shows/findByAwards/:awards
+/shows/findByRating/:rating
 
 Post
 /shows - Add a whole new show
 
 Patch
-/shows/updateShow - update information for a show
+/shows- update information for a show
 
 Delete
-/shows - delete a show
+/shows/:title - delete a show
