@@ -51,11 +51,8 @@ const getShowById = async (req, res) => {
   try {
     const { id } = req.params
 
-    const getShowById = await models.Shows.findAll({
-      where: {
-        [models.Op.or]:
-        [{ title: { [models.Op.like]: `%${id}%` } }, { id }, { status: { [models.Op.like]: `%${id}%` } }]
-      },
+    const getShowById = await models.Shows.findOne({
+      where: { id },
       attributes: ['id', 'title', 'rating', 'status'],
       include: [
         {

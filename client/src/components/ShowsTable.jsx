@@ -8,10 +8,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import TableSortLabel from '@mui/material/TableSortLabel'
 
 const columns = [
-    { id: 'id', label: 'ID', sortable: true, minWidth: 75 },
+    { id: 'id', label: 'ID', minWidth: 75 },
     { id: 'title', label: 'Show Title', minWidth: 100 },
     { id: 'name', label: 'Theater Name', minWidth: 100 },
     { id: 'yearBuilt', label: 'Theater Built', minWidth: 100 },
@@ -45,9 +44,7 @@ const rows = props.shows
                                     key={column.id}
                                     style={{ minWidth: column.minWidth }}S
                                 >
-                                    <TableSortLabel>
                                     {column.label}
-                                    </TableSortLabel>
                                 </TableCell>
                             ))}
                         </TableRow> 
