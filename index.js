@@ -25,7 +25,7 @@ app.use('/api/theater', theatersRouters)
 
 app.set('view engine', 'pug')
 
-app.get('/', (request, response) => {
+app.get('/pug', (request, response) => {
   response.render('index')
 })
 
