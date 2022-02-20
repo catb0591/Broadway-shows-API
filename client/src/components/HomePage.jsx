@@ -14,6 +14,7 @@ const HomePage = () => {
 
     return(
         <div>
+            <h1>Broadway Shows!</h1>
             <ShowsTable shows= {shows}>
             </ShowsTable>
         </div>
